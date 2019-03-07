@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <link rel="stylesheet" type="text/css" href="static/css/dashboard_style.css">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>MediCare: Pharmacy Supply Chain</title>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
+          <a class="navbar-brand" href="{{url_for('me')}}">MediCare</a>
+            <form class="form-inline">
+              <label class="user_detail">User: {{ email_id | safe }}  </label>
+          </form>
+        </nav>
+        <section class="Orders_section">
+            <div class="container-fluid">
+                <div class="text-center">
+                <h3 style="color: #5a5959; text-align: center; ">Orders</h3>
+                <hr align="center" class="bottom-line-dashboard">
+            </div>
+            </div>
+            <div class="container">
+                <table class="table table-sm table-dark">
+                  <thead>
+                    <tr class="bg-danger">
+                      <th scope="col">Order No.</th>
+                      <th scope="col">Name</th>
+                      <th scope="col" colspan="2">Item</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <th scope="row"><a href="#" style="color: aliceblue">#5431</a></th>
+                      <td>Anshul Gupta</td>
+                      <td colspan="2">Paracetamol,Ofloxacin</td>
+                      <td>2</td>
+                      <td>Paid</td>
+                    </tr>
+                    <tr class="bg-warning">
+                        <th scope="row"><a href="#" style="color: aliceblue">#5432</a></th>
+                      <td>Takveer Singh</td>
+                      <td colspan="2">Flemiclav 600mg, Combiflam, Dolo 500</td>
+                      <td>3</td>
+                      <td>UnPaid</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#" style="color: aliceblue">#5433</a></th>
+                      <td>Mayank Goyal</td>
+                      <td colspan="2">Glizid, Nebi, Ranbaxy</td>
+                      <td>1</td>
+                      <td>Paid</td>
+                    </tr>
+                      <tr class="bg-primary">
+                      <th scope="row"><a href="#" style="color: aliceblue">#5434</a></th>
+                      <td>Prikshit Singla</td>
+                      <td colspan="2">Ultracet, Loperamide</td>
+                      <td>4</td>
+                      <td>Paid</td>
+                    </tr>
+                      <tr>
+                      <th scope="row"><a href="#" style="color: aliceblue">#5435</a></th>
+                      <td>Aryan Kaushik</td>
+                      <td colspan="2">Lomofan</td>
+                      <td>2</td>
+                      <td>UnPaid</td>
+                    </tr>
+                      <tr class="bg-danger">
+                      <th scope="row"><a href="#" style="color: aliceblue">#5436</a></th>
+                      <td>Shubhrant Yadav</td>
+                      <td colspan="2">TearFree, Ebast, Levofloxacin</td>
+                      <td>1</td>
+                      <td>UnPaid</td>
+                    </tr>
+                      <tr>
+                    <th scope="row"><a href="#" style="color: aliceblue">#5437</a></th>
+                      <td>Mehar Ahuja</td>
+                      <td colspan="2">Cetrizine, Zorno</td>
+                      <td>3</td>
+                      <td>Paid</td>
+                    </tr>
+                      <tr class="bg-warning">
+                       <th scope="row"><a href="#" style="color: aliceblue">#5438</a></th>
+                      <td>Bhavya Sharma</td>
+                      <td colspan="2">Meftal Spas, Intero Quinol</td>
+                      <td>4</td>
+                      <td>UnPaid</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+            </div>
+        </section>
+
+
+    </body>
+</html>

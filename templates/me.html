@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>MediCare: Pharmacy Supply Chain</title>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
+          <a class="navbar-brand" href="{{url_for('me')}}">MediCare</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medicare" aria-controls="medicare" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="medicare">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link retailer_whole_text">I am a: <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a href="{{url_for('login')}}">
+                    <button class="btn btn-outline-light my-2 my-sm-0 retailer_whole_button" type="button" onclick="retail_function()">Retailer</button>
+                  </a>
+              </li>
+                <li class="nav-item">
+                    <a href="{{url_for('login')}}">
+                        <button class="btn btn-outline-light my-2 my-sm-0 retailer_whole_button" type="button" onclick="whole_function()">WholeSeller</button>
+                    </a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="medicine.html" target="_blank">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </nav>
+
+        <div id="banner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cashback">
+                        <h1>Get Assured 20%<span style="color: #ffb100; font-family: sans-serif;"> CashBack </span><br> on First Purchase</h1>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cashback-medicines">
+                        <img src="static/images/bannerimg.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="header-section text-center">
+                <h3 style="color: #5a5959; text-align: center; ">Popular Medicines</h3>
+                <hr align="center" class="bottom-line">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med1.jpg" alt="MedicineImage" class="medicineimage">
+                        <p class="pills">Paracetamol 500mg</p>
+                        <p class="pills">Rs.20</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med2.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">Revital</p>
+                        <p class="pills">Rs.500</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med3.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">SugerFree Tablets</p>
+                        <p class="pills">Rs.100</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med4.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">Caltrate Calcium Tablets</p>
+                        <p class="pills">Rs.540</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med5.jpg" alt="MedicineImage" class="medicineimage">
+                        <p class="pills">Women Horlicks</p>
+                        <p class="pills">Rs.320</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med6.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">Whey Gold Protein</p>
+                        <p class="pills">Rs.3250</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med7.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">First Aid Home Kit</p>
+                        <p class="pills">Rs.280</p>
+                    </div>
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="static/images/med8.jpg" alt="MedicineImage" class="medicineimage">
+                         <p class="pills">ENO Pack</p>
+                        <p class="pills">Rs.120</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<footer class="page-footer font-small pt-4" style="background-color: #006dcc; color: white;">
+
+    <div class="container-fluid text-center text-md-left">
+
+      <div class="row">
+
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <h5 class="text-uppercase">Contact Us</h5>
+          <p>support@medicare.com</p>
+          <p>+91 6239659458</p>
+
+        </div>
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <h5 class="text-uppercase">Connect with us </h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" style="color: white;text-align: center">Google+</a>
+              </li>
+              <li>
+                <a href="#" style="color: white;">Facebook</a>
+              </li>
+              <li>
+                <a href="#" style="color: white;">Instagram</a>
+              </li>
+              <li>
+                <a href="#" style="color: white;">Twitter</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <h5 class="text-uppercase">Address</h5>
+            <p>Explore Hub,
+                Chitkara University</p>
+              <p>Punjab</p>
+
+
+          </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="http://traineebases.herokuapp.com/" target="_blank" style="color: white;">TraineeBase.co.in</a>
+    </div>
+
+  </footer>
+    </body>
+    <script>
+        function retail_function()
+        {
+            localStorage.setItem("val","Retailer");
+        }
+        function whole_function()
+        {
+            localStorage.setItem("val","Wholeseller");
+        }
+    </script>
+</html>

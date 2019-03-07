@@ -1,0 +1,17 @@
+
+.user_detail {
+    color: white;
+    font-size: 120%;
+}
+
+.Orders_section {
+    padding-top: 100px;
+}
+
+.bottom-line-dashboard {
+    height: 3px;
+    width: 35px;
+    margin-left:49%;
+    margin-bottom: 20px;
+    background-color: darkblue;
+}

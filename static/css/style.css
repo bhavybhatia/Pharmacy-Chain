@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    color: #ffffff;
+    font-family: 'Montserrat','Arial',sans-serif;
+    font-weight: 400;
+    font-size: 110%;
+    text-rendering: optimizeLegibility;
+}
+
+.navbar-brand
+{
+    font-size: 200% !important;
+    font-weight: 500;
+}
+
+#banner{
+    background-color: #cee8f8;
+    margin-bottom: 40px;
+    padding-top: 80px;
+}
+
+
+}
+footer{
+    background-color: #53bfc3;
+    background-position: bottom;
+    align-self: flex-end;
+    font-size: 18px;
+    font-stretch: extra-expanded;
+}
+
+#wholesale{
+    background-color: #fff;
+    color:#53bfc3;
+    border-radius: 10px;
+}
+
+
+.retailer_whole_button {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.retailer_whole_text {
+    margin-left: 280px;
+    color: white !important;
+}
+
+.cashback {
+    text-align: center;
+    color: darkorange;
+    font-weight: 500px;
+    font-family: fantasy;
+    padding: 120px;
+}
+
+.cashback-medicines {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.medicineimage {
+    height: 250px;
+    width: 250px;
+    padding-right: 50px;
+}
+
+.pills {
+    text-align: center;
+    color: #727272;
+    padding-right: 50px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.bottom-line {
+    height: 3px;
+    width: 25px;
+    margin-left:47.5%;
+    margin-bottom: 20px;
+    background-color: darkblue;
+}
+
+.Login {
+     margin-left: 400px;
+    font-size: 120%;
+    text-align: center;
+    color: white !important;
+}
+
+.form-style {
+    margin-top: 50px;
+}
+
+
+
+.login_type {
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.login_form {
+    padding-top: 90px;
+}

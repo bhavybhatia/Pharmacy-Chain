@@ -1,0 +1,119 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>MediCare: Pharmacy Supply Chain</title>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="{{url_for('me')}}">MediCare</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medicare" aria-controls="medicare" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="medicare">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link Login">
+                    Login as<span id="login" class="login_type"></span></a>
+              </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="medicine.html" target="_blank">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </nav>
+        <form action="{{url_for('dashboard')}}" class="login_form" method="post">
+            <fieldset >
+              <div class="form-group container form-style">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+<!--                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+              </div>
+              <div class="form-group container">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+              </div>
+              <div class="form-check container">
+                <input type="checkbox" class="form-check-label" id="myCheck" required> I am not a robot
+              </div>
+            <div class="container">
+              <button type="submit" class="btn btn-primary form-style" style="text-align: center;">Submit</button>
+            </div>
+            </fieldset>
+        </form>
+    </body>
+
+<footer class="page-footer font-small pt-4" style="background-color: #006dcc; color: white; margin-top: 50px;">
+
+    <div class="container-fluid text-center text-md-left">
+
+      <div class="row">
+
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <h5 class="text-uppercase">Contact Us</h5>
+          <p>support@medicare.com</p>
+          <p>+91 6239659458</p>
+
+        </div>
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <h5 class="text-uppercase">Connect with us </h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="{{url_for('me')}}" style="color: white;text-align: center">Google+</a>
+              </li>
+              <li>
+                <a href="{{url_for('me')}}" style="color: white;">Facebook</a>
+              </li>
+              <li>
+                <a href="{{url_for('me')}}" style="color: white;">Instagram</a>
+              </li>
+              <li>
+                <a href="{{url_for('me')}}" style="color: white;">Twitter</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <h5 class="text-uppercase">Address</h5>
+            <p>Explore Hub,
+                Chitkara University</p>
+              <p>Punjab</p>
+
+
+          </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="http://traineebases.herokuapp.com/" target="_blank" style="color: white;">TraineeBase.co.in</a>
+    </div>
+
+  </footer>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myCheck").required;
+        }
+        var s = localStorage.getItem("val");
+        var login1 = document.createElement("p");
+        var node = document.createTextNode(s);
+        login1.appendChild(node);
+        var element = document.getElementById("login");
+        element.appendChild(login1);
+
+    </script>
+</html>
